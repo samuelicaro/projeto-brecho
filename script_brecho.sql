@@ -112,4 +112,22 @@ INSERT INTO tbEnderecoFornecedor(logradouro, cidade, bairro, cep) VALUES
   ('Rua Espanha', 'Sinop', 'Jardim Europa', '78555-216'),
   ('Rua Porciúncula', 'Nilópolis', 'Centro', '26525-480'),
   ('Rua dos Gaviões', 'Serra', 'Porto Canoa', '29168-670');
+
+INSERT INTO tbFornecedor(cpf_cnpj_fornecedor, tipo, nome_fornecedor, nome_empresa, email_fornecedor, id_endereco_fornecedor) VALUES
+  ('89.078.897/0001-80', 'Jurídico', 'Matheus e Evelyn Mudanças' , 'Matheus e Evelyn Mudanças Ltda', 'pesquisa@matheuseevelynmudancasltda.com.br', 1)
+  ('352.144.112-19', 'Físico', 'Pietro Erick Rocha', NULL, 'pietro-rocha75@lojaprincezinha.com.br', 2),
+  ('770.532.721-09', 'Físico', 'Maitê Isabella Renata Sales', NULL, 'maite_sales@amoreencantos.com', 3),
+  ('09.001.759/0001-63', 'Jurídico', 'Thiago e Luiz Restaurante', 'Tiago e Luiz Restaurante ME', 'financeiro@tiagoeluizrestauranteme.com.br', 3),
+  ('987.367.849-23', 'Físico', 'Lorenzo Yuri Baptista', NULL, 'lorenzo_yuri_baptista@isbt.com.br', 4);
   
+INSERT INTO tbTelefoneFornecedor(numero, tipo, cpf_cnpj_fornecedor) VALUES
+  ('(21) 98762-1259', 'Celular', '89.078.897/0001-80'),
+  ('(21) 99437-1925', 'Celular', '352.144.112-19'),
+  ('(21) 2979-2705', 'Fixo', '770.532.721-09'),
+  ('(11) 99778-5166', 'Celular', '09.001.759/0001-63'),
+  ('(11) 3506-7478', 'Celular', '987.367.849-23');
+  
+INSERT INTO tbCLiente(nome_cliente, telefone_celular, cpf_cnpj_fornecedor) VALUES
+  ('Pietro Erick Rocha', '(21) 99437-1925', '352.144.112-19'),
+  ('Louise Simone Cavalcanti', '(21) 99437-1925', NULL),
+  ('Milena Laís da Mata', '(85) 98401-4537', NULL);
